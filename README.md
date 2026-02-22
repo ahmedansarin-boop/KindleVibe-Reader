@@ -1,70 +1,49 @@
-# KindleVibe Reader
+# 📚 KindleVibe Reader
 
-An offline-first EPUB reader for Android with privacy guarantees.
+> A production-ready premium Android eBook reader built with Jetpack Compose
 
-## Build Commands
+![Kotlin](https://img.shields.io/badge/Kotlin-100%25-7F52FF?style=flat&logo=kotlin)
+![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat&logo=android)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
+
+## ✨ Features
+
+- 📄 **PDF & EPUB** support with clean text extraction
+- 🧠 **Smart Reflow Engine** — converts raw PDF text into clean novel-style paragraphs
+- 🎨 **4 Reading Themes** — Day / Night / Sepia / Paper (aged book feel)
+- 📖 **Smart Pagination** — zero mid-sentence cuts between pages
+- 🔖 **Full Persistence** — reading position, font size & theme saved per book
+- 📊 **Progress Bar** — gold gradient with % complete + pages left
+- ✍️ **Text Selection** — long press to select and copy
+- 🌙 **Edge-to-Edge UI** — premium full screen reading experience
+- 🚀 **Splash Screen** — native Android 12+ SplashScreen API
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Kotlin |
+| UI | Jetpack Compose + Material Design 3 |
+| Database | Room DB |
+| Architecture | MVVM + StateFlow |
+| PDF Parsing | Custom Text Extractor |
+| EPUB Parsing | Custom EPUB Engine |
+| Splash Screen | AndroidX SplashScreen API |
+
+## 📱 Getting Started
 
 ```bash
-# Build debug APK
-./gradlew :app:assembleDebug
+# Clone the repo
+git clone https://github.com/ahmedansarin-boop/KindleVibe-Reader.git
 
-# Run tests
-./gradlew test
+# Open in Android Studio
+# Build → Run on device or emulator
 
-# Clean build
-./gradlew clean
-```
 
-## Project Structure
+## 👨‍💻 Developer
 
-- **core/**: Core utilities and shared components
-  - `App.kt`: Application class with dependency injection setup
-  - `Dispatchers.kt`: Coroutine dispatchers wrapper
-  - `Result.kt`: Sealed class for handling API/operation results
+**Nadeem Ahmad** — Android Developer
+📍 New Delhi, India
 
-- **data/**: Data layer with database and repositories
-  - `db/`: Room database setup with entities, DAOs, and migrations
-  - `prefs/`: DataStore preferences wrapper
-  - `repo/`: Repository pattern implementation for data access
-
-- **reader/**: EPUB reading engine integration
-  - `ReadiumInit.kt`: Readium toolkit initialization
-  - `LocatorCodec.kt`: Location/position encoding/decoding
-  - `PreferencesMapper.kt`: Reading preferences mapping
-
-- **ui/**: User interface layer with Jetpack Compose
-  - `theme/`: Material3 theme, colors, and typography
-  - `nav/`: Navigation setup and route definitions
-  - `screens/`: Main app screens (Library, Reader, Settings, About)
-  - `components/`: Reusable UI components
-
-- **viewmodel/**: ViewModels for state management
-  - `LibraryViewModel.kt`: Library screen state and logic
-  - `ReaderViewModel.kt`: Reader screen state and logic
-  - `SettingsViewModel.kt`: Settings screen state and logic
-
-- **MainActivity.kt**: Single-activity entry point hosting the navigation graph
-
-## Features
-
-- Offline-first EPUB reading
-- Privacy-focused (no internet permissions)
-- Material3 design with multiple reading themes
-- Book library management
-- Reading progress tracking
-- Bookmark support (planned)
-
-## Tech Stack
-
-- **Kotlin**: 2.0.x
-- **Jetpack Compose**: Modern UI toolkit
-- **Room**: Local database
-- **DataStore**: Preferences storage
-- **Navigation Compose**: Screen navigation
-- **Readium**: EPUB rendering engine
-- **Coroutines**: Asynchronous programming
-- **Material3**: Design system
-
-## Privacy
-
-This app is designed to be completely offline and does not require internet permissions. All reading data stays on your device.
+---
+*Built with ❤️ using Kotlin + Jetpack Compose*
