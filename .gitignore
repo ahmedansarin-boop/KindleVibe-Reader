@@ -1,4 +1,4 @@
-# Android build files
+# Android
 *.iml
 .gradle
 /local.properties
@@ -7,18 +7,23 @@
 /build
 /captures
 .externalNativeBuild
-.cimports
 **/.cxx
-
-# App build outputs
 app/build/
 
-# Keystore files (NEVER upload these)
+# Keystore
 *.jks
 *.keystore
 
-# Google services (contains private keys)
+# Google services
 google-services.json
 
-# Java heap dumps (huge debug files)
-*.hprof
+# Temporary & test files
+tmp_*/
+*.epub
+*.b64
+*.b64.out
+*.sqlite
+*.db
+tools/
+after_*.xml
+automation-test-*
