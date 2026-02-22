@@ -1,0 +1,24 @@
+# Android build files
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cimports
+**/.cxx
+
+# App build outputs
+app/build/
+
+# Keystore files (NEVER upload these)
+*.jks
+*.keystore
+
+# Google services (contains private keys)
+google-services.json
+
+# Java heap dumps (huge debug files)
+*.hprof
